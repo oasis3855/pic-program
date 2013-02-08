@@ -1,0 +1,312 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PIC_Meter.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\PIC_Meter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PIC_METER_DIALOG DIALOGEX 0, 0, 215, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_APPWINDOW
+CAPTION "PIC Meter"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDOK,160,80,55,15,NOT WS_TABSTOP
+    LTEXT           "Static",IDC_TXT_RAWDATA,0,80,160,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CONTROL         "",IDC_GRAPH_AREA,"Static",SS_BLACKRECT,0,0,215,80
+END
+
+IDD_DLG_SETUP DIALOGEX 0, 0, 270, 259
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "シリアル接続センサーのデータ表示"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "シリアルポート通信条件",IDC_STATIC,5,5,260,50
+    LTEXT           "ポート",IDC_STATIC,10,15,40,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_PORTNO,60,15,50,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "通信速度",IDC_STATIC,125,15,40,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_SPEED,175,15,50,90,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "bps",IDC_STATIC,230,15,30,15,SS_CENTERIMAGE
+    LTEXT           "行末コード",IDC_STATIC,10,35,40,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_LINEEND,60,35,50,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "区切",IDC_STATIC,125,35,20,15,SS_CENTERIMAGE
+    CONTROL         "空白",IDC_CHECK_DELIMIT_SP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,40,30,10
+    CONTROL         ",",IDC_CHECK_DELIMIT_COM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,180,40,25,10
+    CONTROL         "ﾀﾌﾞ",IDC_CHECK_DELIMIT_TAB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,205,40,25,10
+    CONTROL         "改行",IDC_CHECK_DELIMIT_CRLF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,235,40,25,10
+    GROUPBOX        "センサー １",IDC_STATIC,5,60,260,105
+    CONTROL         "センサー１を利用する",IDC_CHECK_1_USE,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,10,70,90,10
+    LTEXT           "フォーマット",IDC_STATIC,10,86,40,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_1_DATA_FORMAT,60,86,50,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "データ位置",IDC_STATIC,125,86,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_COLUMN,175,85,50,15,ES_AUTOHSCROLL
+    LTEXT           "カラム目",IDC_STATIC,230,86,30,15,SS_CENTERIMAGE
+    LTEXT           "入力データ（Ｘ）の範囲",IDC_STATIC,10,106,70,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_MIN,80,106,40,15,ES_AUTOHSCROLL
+    LTEXT           "≦ Ｘ ≦",IDC_STATIC,125,106,35,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_MAX,160,106,40,15,ES_AUTOHSCROLL
+    LTEXT           "変換式",IDC_STATIC,10,126,40,15,SS_CENTERIMAGE
+    LTEXT           "Ｙ ＝",IDC_STATIC,60,126,20,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_FACTOR,80,126,40,15,ES_AUTOHSCROLL
+    LTEXT           "Ｘ ＋",IDC_STATIC,125,125,25,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_YCUT,160,126,40,15,ES_AUTOHSCROLL
+    LTEXT           "タイトル",IDC_STATIC,10,146,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_TITLE,60,146,50,15,ES_AUTOHSCROLL
+    LTEXT           "単位",IDC_STATIC,125,145,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_1_METRIC,175,146,50,15,ES_AUTOHSCROLL
+    GROUPBOX        "グラフ",IDC_STATIC,5,170,125,30
+    LTEXT           "横軸秒数",IDC_STATIC,10,180,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_XSCALE,55,180,50,15,ES_AUTOHSCROLL
+    LTEXT           "秒",IDC_STATIC,110,180,15,15,SS_CENTERIMAGE
+    GROUPBOX        "エラー処理",IDC_STATIC,140,170,125,30
+    LTEXT           "文字数以下は無視",IDC_STATIC,145,180,60,15,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_IGNORE,210,180,50,15,ES_AUTOHSCROLL
+    GROUPBOX        "データのファイル出力",IDC_STATIC,5,205,260,30
+    LTEXT           "データの種類",IDC_STATIC,10,215,50,15,SS_CENTERIMAGE
+    COMBOBOX        IDC_CMB_FILE_OUT,75,216,185,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,155,240,55,15
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,210,240,55,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "FileDescription", "PIC_Meter MFC ｱﾌﾟﾘｹｰｼｮﾝ"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "PIC_Meter"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "PIC_Meter.EXE"
+            VALUE "ProductName", "PIC_Meter ｱﾌﾟﾘｹｰｼｮﾝ"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PIC_METER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DLG_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLG_SETUP DLGINIT
+BEGIN
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x314d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x324d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x334d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x344d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x354d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x364d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x374d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x384d, "\000" 
+    IDC_CMB_PORTNO, 0x403, 5, 0
+0x4f43, 0x394d, "\000" 
+    IDC_CMB_SPEED, 0x403, 4, 0
+0x3033, 0x0030, 
+    IDC_CMB_SPEED, 0x403, 4, 0
+0x3036, 0x0030, 
+    IDC_CMB_SPEED, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_CMB_SPEED, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_CMB_SPEED, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_CMB_SPEED, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_CMB_SPEED, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_CMB_LINEEND, 0x403, 11, 0
+0x554e, 0x4c4c, 0x2820, 0x3030, 0x2948, "\000" 
+    IDC_CMB_LINEEND, 0x403, 9, 0
+0x5243, 0x2820, 0x4430, 0x2948, "\000" 
+    IDC_CMB_LINEEND, 0x403, 9, 0
+0x464c, 0x2820, 0x4130, 0x2948, "\000" 
+    IDC_CMB_LINEEND, 0x403, 13, 0
+0x5283, 0x9383, 0x7d83, 0x2820, 0x4332, 0x2948, "\000" 
+    IDC_CMB_1_DATA_FORMAT, 0x403, 9, 0
+0x5082, 0x4f82, 0x6990, 0x9490, "\000" 
+    IDC_CMB_1_DATA_FORMAT, 0x403, 9, 0
+0x5082, 0x5582, 0x6990, 0x9490, "\000" 
+    IDC_CMB_FILE_OUT, 0x403, 36, 0
+0x6683, 0x5b81, 0x5e83, 0x7483, 0x4083, 0x4383, 0x8b83, 0xf082, 0x6f8f, 
+0xcd97, 0xb582, 0xc882, 0xa282, 0x8120, 0x9269, 0x8fca, 0x81ed, 0x006a, 
+
+    IDC_CMB_FILE_OUT, 0x403, 29, 0
+0xb690, 0x6683, 0x5b81, 0x5e83, 0xf082, 0x7483, 0x4083, 0x4383, 0x8b83, 
+0xc982, 0x6f8f, 0xcd97, 0xb782, 0xe982, "\000" 
+    IDC_CMB_FILE_OUT, 0x403, 33, 0
+0xcf95, 0xb78a, 0xe38c, 0x6683, 0x5b81, 0x5e83, 0xf082, 0x7483, 0x4083, 
+0x4383, 0x8b83, 0xc982, 0x6f8f, 0xcd97, 0xb782, 0xe982, "\000" 
+    IDC_CMB_FILE_OUT, 0x403, 31, 0
+0x6683, 0x6f83, 0x6283, 0x4f83, 0x7097, 0xe093, 0x9495, 0x6683, 0x5b81, 
+0x5e83, 0xf082, 0x6f8f, 0xcd97, 0xb782, 0xe982, "\000" 
+    0
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\PIC_Meter.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
